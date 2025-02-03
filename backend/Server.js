@@ -71,7 +71,10 @@ mongoose.connect(process.env.MONGO_URI)
 // }
 
 app.get("/", (req, res)=>{
-  name: "Admin", status: true,
+  res.send({
+    activeStatus: true,
+    error: false,
+  })
 })
 
 
