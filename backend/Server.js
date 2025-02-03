@@ -63,12 +63,16 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 
-module.exports.gettestData = async(req, res)=>{
-  // const myData = await myModel.find({"name":"Seeta"})
-  const myData = await testModel.find({})
-  res.send(myData)
-console.log("Fetch Data")
-}
+// module.exports.gettestData = async(req, res)=>{
+//   // const myData = await myModel.find({"name":"Seeta"})
+//   const myData = await testModel.find({})
+//   res.send(myData)
+// console.log("Fetch Data")
+// }
+
+app.get("/", (req, res)=>{
+  name: "Admin", status: true,
+})
 
 
 app.get("/testabc", async(req, res)=>{
